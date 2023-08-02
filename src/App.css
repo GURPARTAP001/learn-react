@@ -1,22 +1,7 @@
-.App {
-  text-align: center;
-}
-
-
-
-
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.app{
+  background-color:darkcyan;
   display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  height: 100vh;
 }
-
-
-
-

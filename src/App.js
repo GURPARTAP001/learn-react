@@ -1,29 +1,29 @@
 import './App.css';
+import Video from './components/Video';
 
 function App() { 
-  // thus we can pass the variable inside the return using the {} 
-  //we can also form the various components and pass them in the App component
-  let classname="App-header";
-  let name="Gurpartap Singh";
+
+  let obj={
+    title:"Phone Hacking",
+    views:"345k",
+    time:"1 month",
+    channel:'Legend_Coder'
+  }
+ 
   return (
-    <div className="App">
-      
-      <div className={classname}>
-      {name}
-      <Demo></Demo>
-      </div>
-    </div>
+  <>
+   <div className="app">
+   {/* below we are using the object and the spread operator to pass the props   */}
+   <Video {...obj}></Video>
+   <Video title="laptop Hacking" views="345k" time="1 month" channel='Legend_Coder'></Video>
+   <Video title="wifi Hacking" views="345k" time="1 month" channel='Legend_Coder'></Video>
+   </div>
+  </>
+   
+
   );
 }
 
-function Demo(){
-  return(
-    <div className="App">
-      <div className="App-header">
-        This is the child of the App component
-      </div>
-    </div>
-  )
-}
+
 
 export default App;
