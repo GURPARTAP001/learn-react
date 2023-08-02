@@ -1,25 +1,29 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
+function App() { 
+  // thus we can pass the variable inside the return using the {} 
+  //we can also form the various components and pass them in the App component
+  let classname="App-header";
+  let name="Gurpartap Singh";
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      
+      <div className={classname}>
+      {name}
+      <Demo></Demo>
+      </div>
     </div>
   );
+}
+
+function Demo(){
+  return(
+    <div className="App">
+      <div className="App-header">
+        This is the child of the App component
+      </div>
+    </div>
+  )
 }
 
 export default App;
