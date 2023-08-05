@@ -1,36 +1,12 @@
 import './App.css';
+import Playbutton from './components/Playbutton';
 import Video from './components/Video';
 import videos from './Data/data';
 
-function App() { 
-
-  // here we are passing the obj as a prop to the video component
-//   let videos=[
-//     {
-//       id:1,
-//     title:"PHONE HACKING",
-//     views:"345k",
-//     time:"1 month",
-//     channel:'Legend_Coder',
-//     verified:true
-//   },
-//   {
-//     id:2,
-//   title:"LAPTOP HACKING",
-//   views:"905k",
-//   time:"4 month",
-//   channel:'Legend_Coder',
-//   verified:false
-// },
-// {
-//   id:3,
-// title:"WIFI HACKING",
-// views:"1M",
-// time:"9 month",
-// channel:'Legend_Coder',
-// verified:true
-// }]
- 
+function App() {
+  const btn_click=()=>{
+    console.log("play");
+  } 
   return (
   <>
    <div className="app">
@@ -45,11 +21,11 @@ function App() {
       verified={video.verified}
       id={video.id}
     ></Video>
-   ))}
+    ))}
+    {/* we can pass the function also as a prop to the component here the onClick is the prop that we are passing to the component*/}
+  <Playbutton onClick={btn_click}>PLAY</Playbutton>
    </div>
   </>
-   
-
   );
 }
 
