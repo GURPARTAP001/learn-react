@@ -3,6 +3,7 @@ import Video from './components/Video';
 
 function App() { 
 
+  // here we are passing the obj as a prop to the video component
   let obj={
     title:"Phone Hacking",
     views:"345k",

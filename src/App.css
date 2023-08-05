@@ -1,7 +1,8 @@
+
 .app{
-  background-color:darkcyan;
+  
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  height: 100vh;
+  /* height: 100vh; */
 }
