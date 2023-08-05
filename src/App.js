@@ -5,10 +5,11 @@ function App() {
 
   // here we are passing the obj as a prop to the video component
   let obj={
-    title:"Phone Hacking",
+    title:"PHONE HACKING",
     views:"345k",
     time:"1 month",
-    channel:'Legend_Coder'
+    channel:'Legend_Coder',
+    verified:true
   }
  
   return (
@@ -16,8 +17,8 @@ function App() {
    <div className="app">
    {/* below we are using the object and the spread operator to pass the props   */}
    <Video {...obj}></Video>
-   <Video title="laptop Hacking" views="345k" time="1 month" channel='Legend_Coder'></Video>
-   <Video title="wifi Hacking" views="345k" time="1 month" channel='Legend_Coder'></Video>
+   <Video title="LAPTOP HACKING" views="345k" time="1 month" channel='Legend_Coder' verified={false}></Video>
+   <Video title="WIFI HACKING" views="345k" time="1 month" channel='Legend_Coder' verified={true}></Video>
    </div>
   </>
    

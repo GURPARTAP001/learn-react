@@ -1,18 +1,19 @@
 .main_container{
     
-    display: block;
-    align-items: center;
+    width: 200px;
+    /* display: block;
+    align-items: center; */
 }
-.size img{
-    height: 100%;
-    width: 100%;
-   object-fit: contain;
+
+.pic img{
+   margin-bottom: -4px;
+   width: 200px;
    
 }
 
 .theme{
     color: aliceblue;
-    margin-top: -4px;
-    background-color:darkcyan;
-    text-align: center;
+    /* background-color:darkcyan; */
+    
+    /* background-color: black; */
 }

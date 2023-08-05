@@ -1,6 +1,6 @@
 
 .app{
-  
+  margin-top: 10px;
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
