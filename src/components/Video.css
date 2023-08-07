@@ -17,3 +17,8 @@
     
     /* background-color: black; */
 }
+.btn1{
+    display: flex;
+    justify-content: center;
+    /* background-color: black; */
+}

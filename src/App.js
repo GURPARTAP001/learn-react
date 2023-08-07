@@ -4,8 +4,11 @@ import Video from './components/Video';
 import videos from './Data/data';
 
 function App() {
-  const btn_click=()=>{
-    console.log("play");
+  const btn_click=(msg)=>{
+    console.log("play :"+msg);
+  }
+  const btn_click2=(msg)=>{
+    console.log("pause :"+msg);
   } 
   return (
   <>
@@ -20,10 +23,12 @@ function App() {
       channel={video.channel}
       verified={video.verified}
       id={video.id}
-    ></Video>
+    >
+      {/* here the Playbutton is the child of the video */}
+      <Playbutton msg={video.title} onPlay={btn_click} onPause={btn_click2}>PLAY:{video.title}</Playbutton>
+    </Video>
     ))}
     {/* we can pass the function also as a prop to the component here the onClick is the prop that we are passing to the component*/}
-  <Playbutton onClick={btn_click}>PLAY</Playbutton>
    </div>
   </>
   );

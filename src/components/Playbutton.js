@@ -1,9 +1,17 @@
 import "./Playbutton.css"
 
-function Playbutton({children,onClick}){
+function Playbutton({children,onPlay,onPause,msg}){
 
-    function click(){
-        onClick();
+    let status=false;//this approch is not advisable
+    function click(e){
+        e.stopPropagation();//this will prevent the event bubbling;
+        if(status){
+            onPlay(msg);
+        }
+        else{
+            onPause(msg);
+        }
+        status=!status;   
     }
 
     return(
