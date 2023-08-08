@@ -1,6 +1,9 @@
 .main_container{
     
     width: 200px;
+    /* background-color: #fff; */
+    margin-bottom: 20px;
+    margin-inline: 10px;
     /* display: block;
     align-items: center; */
 }
