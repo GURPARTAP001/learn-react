@@ -1,0 +1,12 @@
+form{
+    width: 20%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    /* background-color: #fff; */
+}
+input{
+    margin: 5px;
+    height: 15px;
+    padding: 5px;
+}
