@@ -20,10 +20,10 @@ function AddVideo({ addVideos }) {
     //using this function we are accessing the content writen inside the inputs
     function handleChange(e) {
         e.stopPropagation();
-        console.log(e.target.name, e.target.value)
+        // console.log(e.target.name, e.target.value)
         setVideo({ ...video, [e.target.name]: e.target.value })
         //the below line will clear the input after we submit it
-        console.log(video);
+        
     }
     return (
         <>
