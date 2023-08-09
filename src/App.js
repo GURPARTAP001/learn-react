@@ -15,6 +15,11 @@ function App() {
 
   const [videos, setVideos] = useState(videosDb)
 
+  //this function takes the video to be added from the AddVideo component and push it with the existing videos
+  function addVideos(video){
+    setVideos([...videos,{...video,id:videos.length+1}])
+  }
+
   return (
     <>
         {/* <button 
@@ -29,7 +34,7 @@ function App() {
             verified: true
           }])
         }}>ADD VIDEOS</button> */}
-        <AddVideo></AddVideo>
+        <AddVideo addVideos={addVideos}></AddVideo>
       <div className="app">
         {/* below we are using the object and the spread operator to pass the props   */}
         {videos.map((video) => (
