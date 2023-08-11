@@ -4,9 +4,22 @@
     /* background-color: #fff; */
     margin-bottom: 20px;
     margin-inline: 10px;
+    position: relative;
     /* display: block;
     align-items: center; */
 }
+
+.close{
+    position: absolute;
+    right: 0%;
+    background-color: transparent;
+    color: red;
+    border: 0;
+}
+.close:hover{
+    background-color:cadetblue;
+}
+
 
 .pic img{
    margin-bottom: -4px;

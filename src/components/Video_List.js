@@ -2,7 +2,7 @@ import Video from "./Video"
 import Playbutton from "./Playbutton"
 
 
-function Video_List({videos,btn_click,btn_click2}){
+function Video_List({videos,btn_click,btn_click2,deleteVideo}){
     return(
         <>
         {/* below we are using the object and the spread operator to pass the props   */}
@@ -15,6 +15,7 @@ function Video_List({videos,btn_click,btn_click2}){
             channel={video.channel}
             verified={video.verified}
             id={video.id}
+            deleteVideo={deleteVideo}
           >
             {/* here the Playbutton is the child of the video */}
             <Playbutton msg={video.title} onPlay={btn_click} onPause={btn_click2}>PLAY</Playbutton>

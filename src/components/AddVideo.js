@@ -14,6 +14,7 @@ function AddVideo({ addVideos }) {
     function handleSubmit(e) {
         e.preventDefault();
         addVideos(video);
+        //the below line will clear the input after we submit it
         setVideo(initState)
     }
 
@@ -22,7 +23,7 @@ function AddVideo({ addVideos }) {
         e.stopPropagation();
         // console.log(e.target.name, e.target.value)
         setVideo({ ...video, [e.target.name]: e.target.value })
-        //the below line will clear the input after we submit it
+        
         
     }
     return (
