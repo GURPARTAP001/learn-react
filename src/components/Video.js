@@ -1,13 +1,13 @@
 import "./Video.css"
 
 // here we have assigned the default prop to the channel
-function Video({ title, views, time, channel = "Legend_Coder", verified, id, children,deleteVideo,editVideo }) {
+function Video({ title, views, time, channel = "Legend_Coder", verified, id, children, dispatch = { dispatch }, editVideo }) {
     let bg = "theme"//we are passing the "theme" as a class 
 
-    function deleteVd(){
-         deleteVideo(id)
+    function deleteVd() {
+        dispatch({ type: "DELETE", paylaod: id })
     }
-    function editVd(){
+    function editVd() {
         editVideo(id);
     }
     return (
