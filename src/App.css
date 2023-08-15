@@ -6,3 +6,10 @@
   flex-wrap: wrap;
   /* height: 100vh; */
 }
+
+.darkmode{
+  background-color: #110808;
+}
+.lightmode{
+  background-color:rgb(33, 170, 216);
+}

@@ -1,8 +1,9 @@
-import { useReducer, useState } from 'react';
+import { useContext, useReducer, useState } from 'react';
 import './App.css';
 import videosDb from './Data/data';
 import AddVideo from './components/AddVideo';
 import Video_List from './components/Video_List';
+import Themecontext from './context/Themecontext';
 
 function App() {
 
@@ -27,6 +28,11 @@ function App() {
   }
   const [videos, dispatch] = useReducer(videoReducer, videosDb)
 
+
+
+  // UISNG THE  "useContext" 
+  const themecontext=useContext(Themecontext);
+
   // const [videos, setVideos] = useState(videosDb)
   const [edit, setEdit] = useState(null)
 
@@ -46,7 +52,7 @@ function App() {
     <>
 
       <AddVideo dispatch={dispatch} edit={edit} setEdit={setEdit} ></AddVideo>
-      <div className="app">
+      <div className={`app ${themecontext}`}>
         <Video_List videos={videos} btn_click={btn_click} btn_click2={btn_click2} dispatch={dispatch} editVideo={editVideo}></Video_List>
       </div>
 
