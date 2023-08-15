@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
 import "./AddVideo.css"
-function AddVideo({ dispatch, edit }) {
+function AddVideo({ dispatch, edit,setEdit }) {
 
+    console.log(edit);
     const initState = {
         title: "",
         views: "",
@@ -10,19 +11,21 @@ function AddVideo({ dispatch, edit }) {
         verified: true
     }
     const [video, setVideo] = useState(initState)
-
+    
     // using this function we are passing the props from component to the "app"
     function handleSubmit(e) {
         e.preventDefault();
 
         if (edit) {
             dispatch({ type: "UPDATE", paylaod: video })
+           setEdit(null);
         }
         else {
             dispatch({ type: "ADD", paylaod: video })
         }
         //the below line will clear the input after we submit it
         setVideo(initState)
+        
     }
 
     //using this function we are accessing the content writen inside the inputs

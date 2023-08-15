@@ -45,7 +45,7 @@ function App() {
   return (
     <>
 
-      <AddVideo dispatch={dispatch} edit={edit} ></AddVideo>
+      <AddVideo dispatch={dispatch} edit={edit} setEdit={setEdit} ></AddVideo>
       <div className="app">
         <Video_List videos={videos} btn_click={btn_click} btn_click2={btn_click2} dispatch={dispatch} editVideo={editVideo}></Video_List>
       </div>
