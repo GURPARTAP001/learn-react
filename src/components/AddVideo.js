@@ -1,8 +1,11 @@
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
 import "./AddVideo.css"
-function AddVideo({ dispatch, edit,setEdit }) {
+import VideosDispatchContext from "../context/VideosDispatchContext";
+function AddVideo({  edit,setEdit }) {
 
-    console.log(edit);
+
+    const dispatch=useContext(VideosDispatchContext)
+    
     const initState = {
         title: "",
         views: "",

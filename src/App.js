@@ -4,6 +4,9 @@ import videosDb from './Data/data';
 import AddVideo from './components/AddVideo';
 import Video_List from './components/Video_List';
 import Themecontext from './context/Themecontext';
+import VideosDispatchContext from './context/VideosDispatchContext';
+import videosContext from './context/videosContext';
+
 
 function App() {
 
@@ -31,7 +34,7 @@ function App() {
 
 
   // UISNG THE  "useContext" 
-  const themecontext=useContext(Themecontext);
+  const themecontext = useContext(Themecontext);
 
   // const [videos, setVideos] = useState(videosDb)
   const [edit, setEdit] = useState(null)
@@ -51,11 +54,16 @@ function App() {
   return (
     <>
 
-      <AddVideo dispatch={dispatch} edit={edit} setEdit={setEdit} ></AddVideo>
-      <div className={`app ${themecontext}`}>
-        <Video_List videos={videos} btn_click={btn_click} btn_click2={btn_click2} dispatch={dispatch} editVideo={editVideo}></Video_List>
-      </div>
-
+      {/* here we will pass the state video using the context */}
+      <videosContext.Provider value={videos}>
+        <VideosDispatchContext.Provider value={dispatch}>
+          <AddVideo edit={edit} setEdit={setEdit} ></AddVideo>
+          <div className={`app ${themecontext}`}>
+            {/* as we have passed the "videos" using the context so we can remove it from the props section */}
+            <Video_List btn_click={btn_click} btn_click2={btn_click2} editVideo={editVideo}></Video_List>
+          </div>
+        </VideosDispatchContext.Provider>
+      </videosContext.Provider>
     </>
   );
 }

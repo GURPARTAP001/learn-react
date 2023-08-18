@@ -1,8 +1,17 @@
 import Video from "./Video"
 import Playbutton from "./Playbutton"
+import { useContext } from "react"
+
+import VideosDispatchContext from "../context/VideosDispatchContext"
+import videosContext from "../context/videosContext"
 
 
-function Video_List({ videos, btn_click, btn_click2, dispatch = { dispatch }, editVideo }) {
+function Video_List({  btn_click, btn_click2,  editVideo }) {
+
+  // in the below line we are using the useContext to get the prop directly
+  const videos=useContext(videosContext)
+  const dispatch=useContext(VideosDispatchContext)
+    
   return (
     <>
       {/* below we are using the object and the spread operator to pass the props   */}
